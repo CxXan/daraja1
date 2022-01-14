@@ -1,0 +1,793 @@
+body{
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    background: #000000;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.btn{
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    padding: .6rem 1.2rem;
+    text-transform: capitalize;
+    color: #fff;
+    border-radius: 2rem;
+}
+
+.btn-signOut{
+    background:rgb(218, 186, 7);
+}
+/* --G-- */
+.landing{
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(to bottom, rgb(4, 126, 15), rgb(97, 99, 6));
+}
+.nav{
+    justify-content: space-between;
+    height: 10vh;
+    padding: 0 1rem;
+    align-items: center;
+}
+.nav .logo a img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.lk > a{
+    width: 100px;
+    text-align: center;
+}
+.btn-lg{
+    margin-right: 2rem;
+    border: 1px solid #fff;
+    background: transparent;
+}
+.btn-lg:hover{
+    background:rgb(218, 186, 7);
+    transition: .4s;
+    border: 1px solid rgb(218, 186, 7);
+}
+:is(.btn-gs, .btn-sg){
+    background:rgb(218, 186, 7);
+    border: 1px solid rgb(218, 186, 7);
+}
+:is(.btn-gs, .btn-sg):hover{
+    background: transparent;
+    border: 1px solid #fff;
+    transition: .4s;
+}
+.dt-f{
+    position: relative;
+    height: 90vh;
+    width: 100vw;
+    /* background: url('https://images.unsplash.com/photo-1582489853490-cd3a53eb4530?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80') no-repeat; */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+    /* background-position: center; */
+    /* background-size: cover; */
+    /* box-shadow: inset 50px 50px 100px #000000, inset -50px -100px 150px #000000; */
+    background: #00000099;
+    align-items: center;
+}
+.inner-f{
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    transform: translateY(-50%);
+    align-items: center;
+}
+.inner-f h1{
+    word-wrap: break-word;
+    font-size: 4.3rem;
+    text-transform: capitalize;
+    text-align: center;
+    color: #fff;
+}
+.inner-f p{
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    color: rgb(252, 215, 8);
+}
+.btn-gs{
+    margin-top: 2rem;
+    width: 250px;
+    padding: .9rem 1.7rem;
+    text-align: center;
+}
+.srv{
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    align-items: center;
+}
+.srv .ind img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+.srv p{
+    padding-left: 2rem;
+    width: 550px;
+    line-height: 1.5;
+    color: #fff;
+    font-size: 1.2rem;
+}
+.cnt{
+    position: absolute;
+    right: 2%;
+    bottom: 1%;
+    /* background: green; */
+    width: 280px;
+    height: 130px;
+}
+.cnt p{
+    color: #fff;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+.cnt .mlg{
+    font-size: 1.1rem;
+    color: #fff;
+}
+.cnt .mlg li{
+    padding: 1rem 0;
+}
+.cnt .mlg li i{
+    padding: 0 .5rem;
+    color: greenyellow;
+}
+/* login & signup */
+:is(.fgt-ld, .lg-ld, .sg-ld){
+    display: grid;
+    place-items: center;
+}
+:is(.fgtForm, .login-form, .sgpForm){
+    width: 600px;
+    height: 55vh;
+    padding: 1rem;
+    background: #00000099;
+    border-radius: 2rem 0 2rem 0;
+}
+.fgtForm{
+    height: 60vh;
+}
+.sgpForm{
+    height: 95vh;
+}
+.mg{
+    width: 100%;
+    height: 8vh;
+    display: grid;
+    place-items: center;
+}
+.mg img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+:is(.formfgt, .formlog){
+    width: 100%;
+    height: 50vh;
+}
+
+.adminLogin{
+    height: 30vh;
+}
+/* .formfgt{
+    height: 25vh;
+} */
+.ui{
+    position: relative;
+}
+.ui label{
+    color: #fff;
+    text-transform: capitalize;
+}
+.input{
+    width: 100%;
+    padding: .7rem 1rem;
+    margin: .3rem 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    outline: none;
+    color: #fff;
+    font-size: 1rem;
+}
+.btnFrmlogin{
+    background: green;
+    color: #fff;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    letter-spacing: 1.4px
+}
+:is(.sgf, .opts){
+    margin-top: 2rem;
+}
+.sgf{
+    margin-top: 1rem;
+}
+.opts > p{
+    padding: 1rem 0;
+}
+.fgt{
+    font-size: 1.2rem;
+    color: #fff;
+    text-transform: capitalize;
+}
+.fgt a{
+    color: yellow;
+    text-transform: none;
+}
+
+
+
+/* media queries */
+@media only screen and (max-width:1000px){
+    .inner-f h1{
+        font-size: 3rem;
+    }
+    .inner-f p{
+        font-size: 1.2rem;
+    }
+    .srv .ind img{
+        width: 100px;
+        height: 100px;
+    }
+    .srv p{
+        padding-left: 1rem;
+        width: 450px;
+        font-size: 1.1rem;
+    }
+    .cnt{
+        right: 2%;
+    }
+    .cnt p{
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (max-width:800px){
+    .srv .ind img{
+        width: 70px;
+        height: 70px;
+    }
+    .srv p{
+        padding-left: .5rem;
+        width: 300px;
+        font-size: .9rem;
+    }
+    .cnt{
+        right: 0;
+    }
+    .cnt p{
+        font-size: 1rem;
+    }
+    .cnt .mlg{
+        font-size: .9rem;
+    }
+}
+@media only screen and (max-width:500px){
+    .srv p{
+        padding-left: .5rem;
+        width: 150px;
+        font-size: .8rem;
+    }
+}
+
+
+/* dashboard */
+.dashboard{
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(to bottom, rgb(4, 126, 15), rgb(97, 99, 6));
+}
+
+.dashboard h2{
+    font-size: 3rem;
+    color: #fff;
+}
+
+.dash_nav{
+    min-height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    background: #00000099;
+}
+
+.dash_nav h2{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.nav_image{
+    width: 50px;
+    height: 50px;
+    background: yellow;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.trans_recrs a{
+    font-size: 1.1rem;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 0 1.5rem;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.w_view{
+    min-height: 90vh;
+    padding: 1rem;
+}
+
+.user_profile{
+    width: 600px;
+    height: 400px;
+    border: 1px solid rgb(252, 215, 8);
+    border-radius: .5rem;
+    padding: 1rem;
+    margin: 0 1rem;
+}
+
+.user_image{
+    width: 120px;
+    height: 120px;
+    border-radius: 2rem;
+    overflow: hidden;
+    background: rgb(4, 126, 15);
+    border: 1px solid rgb(252, 215, 8);
+    display: grid;
+    place-items: center;
+}
+
+.user_image h2{
+    text-transform: capitalize;
+    font-size: 5rem;
+}
+
+.user_details{
+    margin-top: 1.5rem;
+}
+
+.user_details h2{
+    color: rgb(252, 215, 8);
+    font-size: 2rem;
+    text-transform: capitalize;
+    line-height: 2;
+}
+
+.user_details h2 span{
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    margin-left: 2rem;
+}
+
+.company_trg{
+    width: 97vw;
+    height: 60px;
+    background: #00000099;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+}
+
+.company_trg h2{
+    font-size: 1.5rem;
+    letter-spacing: 3.5px;
+}
+
+.fm_smry{
+    padding: .5rem;
+    height: 500px;
+    border: none;
+}
+
+.farmer_summary{
+    width: 550px;
+    height: 220px;
+    background: #00000099;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: .5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.farmer_summary h2{
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    letter-spacing: 1.8px;
+}
+
+.circl{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: rgb(252, 215, 8);
+    display: grid;
+    place-items: center;
+}
+
+.circl h2{
+    font-size: 2.5rem;
+    color: #000000;
+}
+
+/* order page & transactions page */ 
+:is(.order_div, .transactions){
+    min-height: 90vh;
+    padding: 1rem;
+}
+
+.ovfl{
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.case_data_sty{
+    width: 90vw;
+    height: 70px;
+    border-radius: .5rem;
+    background: #00000099;
+    margin-bottom: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    padding: 0 1rem;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.p-align{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.case_data_sty p:first-child{
+    text-transform: capitalize;
+    color: rgb(4, 126, 15);
+    margin-right: .5rem;
+}
+
+.case_data{
+    width: 350px;
+    height: 400px;
+    border-radius: .5rem;
+    background: #00000099;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.fert-img{
+    width: 350px;
+    height: 220px;
+    background: rgb(6, 40, 151);
+    overflow: hidden;
+}
+
+.fert-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fert-details{
+    width: 350px;
+    height: 180px;
+    /* background: rosybrown; */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fert-details h2{
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+
+.fert-details h2 span{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgb(252, 215, 8);
+}
+
+.fert-details h3{
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+.fert-details h3 span{
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn-order{
+    background: rgb(4, 126, 15);
+    color: #ffffff;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.btn-rpt{
+    border: 1px solid #ffffff;
+    margin-right: 1rem;
+}
+
+.logadm{
+    margin-top: 1.5rem;
+}
+
+.byf form{
+    min-height: 90vh;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.odp{
+    min-height: 450px;
+    width: 400px;
+    border-radius: .5rem;
+    background: #00000099;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+:is(.payment_d, .order_d) h2{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    line-height: 2;
+}
+
+:is(.payment_d, .order_d) h2:first-child{
+    border-bottom: 1px solid #fff;
+}
+
+.order_d h2 p{
+    color: rgb(252, 215, 8); 
+}
+
+.checkout_{
+    width: 100%;
+    height: 250px;
+    background: rgb(4, 126, 15);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: .5rem;
+}
+
+.checkout_ label{
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.checkout_ input{
+    padding: 0 1rem;
+    height: 40px;
+    border-radius: 2rem;
+    outline: none;
+    border: none;
+}
+
+.btn_checkout{
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    cursor: pointer;
+    color: rgb(4, 126, 15);
+}
+
+.pay_firm{
+    width: 100%;
+    height: 150px;
+    /* background: rosybrown; */
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.pay_firm img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* <!-- The drop down payment div --> */
+.drp_pay_div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgb(4, 126, 15), rgb(97, 99, 6));
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+    transform: translateY(-100%);
+    transition: all .4s linear;
+}
+
+.drp_pay_div_toggle{
+    transform: translateY(0%);
+}
+
+.darken{
+    background: #000000;
+}
+
+/* Admin css */
+.rstDiv{
+    min-height: 90vh;
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.admin_case{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* text-align: center; */
+    padding: 1rem;
+}
+
+.admin_case h2{
+    font-size: 1.7rem;
+    text-transform: capitalize;
+}
+
+.admin_case h2:first-child{
+    text-align: center;
+    border-bottom: 1px solid #fff;
+}
+
+.admin_case p{
+    color: rgb(252, 215, 8);
+}
+
+.lcc{
+    width: 95%;
+    height: 200px;
+    background: rgb(4, 126, 15);
+    border-radius: 2rem;
+    display: grid;
+    place-items: center;
+}
+
+.lcc h2{
+    border: none;
+    font-size: 2.7rem;
+}
+
+.details_farmer_div{
+    min-height: 90vh;
+    max-height: 90vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.farmer_div{
+    width: 100%;
+    height: 50px;
+    border-radius: .3rem;
+    background: #00000099;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    color: #ffffff;
+    padding: 0 .5rem;
+}
+
+.farmer_div:last-child{
+    margin-bottom: 0rem;
+}
+
+.farmer_div p{
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.pay_div{
+    min-height: 90vh;
+    position: relative;
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+}
+
+.payfr{
+    width: 80vw;
+    height: 75vh;
+}
+
+.farmPay{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+
+.farmPay .inr_dv{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 60vh;
+    justify-content: space-around;
+}
+
+.farmPay .inr_dv h2{
+    font-size: 2rem; 
+    text-transform: capitalize;
+}
+
+.farmPay .inr_dv select{
+    padding: 1rem;
+    outline: none;
+}
+
+.farmPay .inr_dv input{
+    padding: 1rem;
+    outline: none;
+}
+
+.btn_pay{
+    text-transform: capitalize;
+}
